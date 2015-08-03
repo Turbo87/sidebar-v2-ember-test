@@ -1,14 +1,9 @@
 import Ember from 'ember';
 
-export default Ember.Route.extend({
-  activate() {
-    // wait for the template to render
-    Ember.run.later(this, this.setupMap, 0);
-  },
-
-  setupMap() {
+export default Ember.Component.extend({
+  didInsertElement() {
     this.set('map', new ol.Map({
-      target: 'map',
+      target: this.get('elementId'),
       layers: [
         new ol.layer.Tile({
           source: new ol.source.MapQuest({layer: 'sat'})
