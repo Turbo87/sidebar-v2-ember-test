@@ -25,5 +25,7 @@ module.exports = function(defaults) {
   });
   app.import('bower_components/ol3/ol.css');
 
+  app.import('bower_components/sidebar-v2/css/ol3-sidebar.css');
+
   return app.toTree();
 };
