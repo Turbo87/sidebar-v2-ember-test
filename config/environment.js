@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'sidebar-v2-ember-test',
     environment: environment,
     baseURL: '/sidebar-v2-ember-test/',
-    locationType: 'auto',
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
