@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'sidebar-v2-ember-test',
     environment: environment,
-    baseURL: '/',
+    baseURL: '/sidebar-v2-ember-test/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {

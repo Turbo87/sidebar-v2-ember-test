@@ -5,6 +5,10 @@ node_js:
 
 sudo: false
 
+env:
+  global:
+    secure: JZmGwGk0n9TruLGt2aWb98gKwKJ07nRBhFEI0PLqI/o8xptZK1DJVGpeLEsiQdpJc6OAlA0OMWq+68oobjSnXyMfxWTL1im+JTV+VmDSkDhKD0/1XUkXhTX7pzyVdkfGf9wJa71bZPXzE7pv04WVemaU345Vk2tcO21kIWHlWWwy1OHWw3bBmOWEC/UavWEg81NUx22eL996BCffrODmPVOoFmguJNCRajAqWTdI9oDn5eQxvbwgDH0hDBhAI5amJuyELpNCv909uErNfD+iu4U7Xvbt6LnNPMwnk7V0kkbywREU5O0qtZPT/YZtyk15KnVDOPGBMSm2hC5bL1GqLoj5Eevgu0e/dhvnuv6FXudWknQIoE7XOeUyu+D1syF450i3WabfFSfhr/u6Jy96lg5rCQXPKZFZVsj/tbNsuhyKMmEMWJIg1Q66qZQQgzWlUbfNl+1x4gTFVmAequs0YoYU/cIHGHc0lQl7s6wuGsn6sCUgvc1WtgwFDxT//u1fygDCumMzLW7H3UtDVs3IygeIiMO5KC7b0MqzBApd9vBUVK7BJRnw+vB8EsX989cBI7YQZmHDVuGKtu+/mlEQLgz97gQUw8UdcffQmQ4h/FyyOARUH0o/fByT9B7M3oJ6+bg3dZ7i0JOwaA9BOWA8V9vXHnAbBKMzXmuMs/YtGNI=
+
 cache:
   directories:
     - node_modules
@@ -21,3 +25,7 @@ install:
 
 script:
   - npm test
+  - if [[ "$TRAVIS_BRANCH" == "master" ]]; then npm run build -- --environment production; fi
+
+after_success:
+  - if [[ "$TRAVIS_BRANCH" == "master" ]]; then bash ./deploy.sh; fi
