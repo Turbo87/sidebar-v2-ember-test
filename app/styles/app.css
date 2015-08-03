@@ -7,3 +7,7 @@ body {
 html, body, body > .ember-view, body > .ember-view > .ember-view, #map {
   height: 100%;
 }
+
+.sidebar-pane {
+  display: block;
+}

@@ -1,1 +1,16 @@
+<div id="sidebar" class="sidebar {{if isIndexActive 'collapsed'}} sidebar-left">
+  <!-- Nav tabs -->
+  <ul class="sidebar-tabs" role="tablist">
+    {{#link-to 'route2' tagName='li'}}<a>{{fa-icon 'user'}}</a>{{/link-to}}
+    {{#link-to 'route3' tagName='li'}}<a>{{fa-icon 'envelope'}}</a>{{/link-to}}
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="sidebar-content">
+    <div class="sidebar-pane">
+      {{outlet}}
+    </div>
+  </div>
+</div>
+
 <div id="map" class="sidebar-map"></div>
