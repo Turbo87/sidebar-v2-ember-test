@@ -19,5 +19,11 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
+  app.import({
+    development: 'bower_components/ol3/ol-debug.js',
+    production: 'bower_components/ol3/ol.js'
+  });
+  app.import('bower_components/ol3/ol.css');
+
   return app.toTree();
 };
