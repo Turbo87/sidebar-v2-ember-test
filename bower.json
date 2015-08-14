@@ -15,5 +15,8 @@
     "ol3": "https://github.com/openlayers/ol3/releases/download/v3.8.2/v3.8.2-dist.zip",
     "sidebar-v2": "e6623c3b9c0c5b3ba6b02c38cc438767378d9706",
     "font-awesome": "~4.3.0"
+  },
+  "resolutions": {
+    "ember": "2.0.0"
   }
 }
